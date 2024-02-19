@@ -1,15 +1,15 @@
 import React from 'react';
 
-class CommentBox extends Component {
+class CommentBox extends React.Component {
 
-  handleChange = () => {
+  handleChange = event => {
     this.setState({ comment: event.target.value })
   }
 
-  handleSubmit = () => {
+  handleSubmit = event => {
     event.preventDefault()
 
-
+    this.setState({ comment: "" })
   }
 
   state = { comment: '' }
@@ -30,3 +30,4 @@ class CommentBox extends Component {
     )
   }
 }
+export default CommentBox
